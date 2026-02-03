@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nagarro Azure Training</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">AzureTraining</div>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h1>Welcome</h1>
+        <p class="subtitle">Azure App Service Demo Dashboard</p>
+
+        <div class="button-row">
+            <a href="/users" class="btn secondary" >Load Users</a>
+            <a href="/show-image" class="btn secondary" >Show Logo</a>
+            <a href="/process-order" class="btn secondary" >Order Process</a>
+        </div>
+<% if (processOrder) { %>
+        <form method="POST" action="/call-function" class="form">
+            <div class="input-group">
+                <label>Order ID</label>
+                <input type="text" name="orderId" required>
+            </div>
+
+            <div class="input-group">
+                <label>Status</label>
+                <input type="text" name="status" required>
+            </div>
+
+            <button class="btn action">Order Process</button>
+        </form>
+<% } %>
+        <% if (status) { %>
+        <div class="result">
+            <span class="badge">Status: <%= status %></span>
+            <% if (body) { %>
+                <pre ><%= body %></pre>
+            <% } %>
+            <% if (image) { %>
+                <hr/ >
+                <img src="<%= image %>" alt="img">
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+</main>
+
+<footer class="footer">
+    @ 2026 AzureTraining
+</footer>
+
+</body>
+</html>
