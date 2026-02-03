@@ -1,0 +1,7 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "files.exclude": {
+    },
+    "appService.defaultWebAppToDeploy": "/subscriptions/cde7b81d-2da8-456a-8cb8-abb0ee1a9fc0/resourceGroups/rg-nagarro-dev/providers/Microsoft.Web/sites/as-nagarro-dev",
+    "appService.deploySubpath": "."
+}
