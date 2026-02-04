@@ -45,6 +45,7 @@ app.get("/process-order", async (req, res) => {
   
   res.render("index", {
     ...blankResponse,
+    status: "200",
     processOrder: true,
   });
 })
