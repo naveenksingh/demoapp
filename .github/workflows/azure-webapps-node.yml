@@ -20,7 +20,6 @@ jobs:
 
     - run: |
         mkdir publish
-        cp -r . publish
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
